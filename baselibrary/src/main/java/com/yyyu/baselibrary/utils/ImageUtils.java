@@ -7,8 +7,8 @@ import android.graphics.PixelFormat;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.IntRange;
+import androidx.annotation.ColorInt;
+import androidx.annotation.IntRange;
 
 /**
  * 功能：图片处理相关工具类

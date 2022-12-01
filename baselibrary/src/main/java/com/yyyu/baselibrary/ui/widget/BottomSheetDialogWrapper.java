@@ -2,14 +2,16 @@ package com.yyyu.baselibrary.ui.widget;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.StyleRes;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.BottomSheetDialog;
+import androidx.annotation.NonNull;
+import androidx.annotation.StyleRes;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.yyyu.baselibrary.R;
 
 /**
  * <p>更加强壮的 BottomSheetDialog </p>
@@ -110,7 +112,7 @@ public class BottomSheetDialogWrapper extends BottomSheetDialog {
             return mBottomSheetBehavior;
         }
 
-        View view = mWindow.findViewById(android.support.design.R.id.design_bottom_sheet);
+        View view = mWindow.findViewById(R.id.design_bottom_sheet);
         // setContentView() 没有调用
         if (view == null) {
             return null;

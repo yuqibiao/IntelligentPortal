@@ -6,7 +6,7 @@
     android:id="@+id/ll_toolbar"
     android:orientation="vertical">
     <!--toolbar-->
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         style="@style/base_tb"
         android:layout_height="61dp"
         android:background="@color/colorPrimary">
@@ -28,7 +28,7 @@
 
         </RelativeLayout>
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/split_line" />
 

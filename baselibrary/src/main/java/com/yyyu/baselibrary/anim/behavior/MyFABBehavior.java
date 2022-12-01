@@ -2,17 +2,19 @@ package com.yyyu.baselibrary.anim.behavior;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPropertyAnimatorListener;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 
-import static android.support.v4.view.ViewCompat.animate;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.ViewPropertyAnimatorListener;
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import static androidx.core.view.ViewCompat.animate;
 
 /**
  * 功能：自定义Behavior 实现FAB的动态隐藏、显示

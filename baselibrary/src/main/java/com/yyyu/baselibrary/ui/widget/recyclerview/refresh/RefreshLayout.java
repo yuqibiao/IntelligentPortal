@@ -1,23 +1,24 @@
 package com.yyyu.baselibrary.ui.widget.recyclerview.refresh;
 
 import android.content.Context;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.ListView;
 
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 
 /**
  * 功能：具有上拉加载的SwipeRefreshLayout
  */
 
-public class RefreshLayout extends SwipeRefreshLayout{
+public class RefreshLayout extends SwipeRefreshLayout {
 
     private static final String TAG = "RefreshLayout=============";
 

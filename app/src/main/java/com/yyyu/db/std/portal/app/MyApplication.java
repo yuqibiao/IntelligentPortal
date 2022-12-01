@@ -1,17 +1,17 @@
 package com.yyyu.db.std.portal.app;
 
-import android.support.multidex.MultiDexApplication;
 import android.text.TextUtils;
+
+import androidx.multidex.MultiDexApplication;
 
 import com.google.gson.Gson;
 import com.hjq.toast.ToastUtils;
+import com.yyyu.baselibrary.utils.ActivityHolder;
+import com.yyyu.baselibrary.utils.MySPUtils;
 import com.yyyu.db.std.portal.app.bean.rtn.UserBean;
 import com.yyyu.db.std.portal.app.global.Constants;
 import com.yyyu.db.std.portal.app.global.state.LoginContext;
 import com.yyyu.db.std.portal.app.ui.activity.LoginActivity;
-import com.yyyu.db.std.portal.app.ui.activity.MainActivity;
-import com.yyyu.baselibrary.utils.ActivityHolder;
-import com.yyyu.baselibrary.utils.MySPUtils;
 
 /**
  * 功能：上下文

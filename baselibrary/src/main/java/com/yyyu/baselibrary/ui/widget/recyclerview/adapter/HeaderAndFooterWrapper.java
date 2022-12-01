@@ -1,11 +1,12 @@
 package com.yyyu.baselibrary.ui.widget.recyclerview.adapter;
 
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 /**
  * 功能：扩展Adapter 使得能添加Header和Footer

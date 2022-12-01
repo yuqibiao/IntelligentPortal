@@ -1,7 +1,7 @@
 package com.yyyu.db.std.portal.app.ui.pop;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lxj.xpopup.core.AttachPopupView;
 import com.yyyu.db.std.portal.app.R;

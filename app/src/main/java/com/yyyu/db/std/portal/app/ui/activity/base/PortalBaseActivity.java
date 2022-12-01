@@ -5,8 +5,10 @@
 package com.yyyu.db.std.portal.app.ui.activity.base;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import androidx.fragment.app.Fragment;;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import android.view.Gravity;
 
 import com.hjq.toast.ToastUtils;

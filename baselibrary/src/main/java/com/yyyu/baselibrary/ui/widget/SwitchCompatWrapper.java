@@ -1,6 +1,6 @@
 package com.yyyu.baselibrary.ui.widget;
 
-import android.support.v7.widget.SwitchCompat;
+import androidx.appcompat.widget.SwitchCompat;
 import android.widget.CompoundButton;
 
 import com.yyyu.baselibrary.utils.MyLog;

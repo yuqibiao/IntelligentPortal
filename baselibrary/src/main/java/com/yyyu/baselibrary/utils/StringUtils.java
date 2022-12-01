@@ -1,10 +1,8 @@
 package com.yyyu.baselibrary.utils;
 
 import android.content.Context;
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 import android.text.TextUtils;
-
-import com.yyyu.baselibrary.utils.ResourceUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

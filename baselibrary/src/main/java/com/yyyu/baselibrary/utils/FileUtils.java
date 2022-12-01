@@ -10,7 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

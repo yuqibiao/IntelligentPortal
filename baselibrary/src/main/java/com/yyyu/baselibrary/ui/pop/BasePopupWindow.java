@@ -2,10 +2,12 @@ package com.yyyu.baselibrary.ui.pop;
 
 import android.app.Activity;
 import android.graphics.drawable.ColorDrawable;
-import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
+
+
+import androidx.fragment.app.Fragment;
 
 import java.util.HashMap;
 import java.util.Map;
