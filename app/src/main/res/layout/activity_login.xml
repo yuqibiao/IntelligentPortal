@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="智 隧 通"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="46dp"
+            android:textStyle="bold" />
+
+        <!--login-->
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="18dp"
+            android:elevation="1dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:id="@+id/ll_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@color/trans"
+                    android:drawableLeft="@mipmap/ic_et_user"
+                    android:drawablePadding="5dp"
+                    android:hint="请输入登录账号或手机号"
+                    android:inputType="number"
+                    android:paddingLeft="8dp"
+                    android:text="admin"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <View
+                    style="@style/split_line"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp" />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@color/trans"
+                    android:drawableLeft="@mipmap/ic_et_pwd"
+                    android:drawablePadding="5dp"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:paddingLeft="8dp"
+                    android:text="qxsdV1.0@sdgs"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/base_btn"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="16dp"
+            android:text="登录" />
+
+    </LinearLayout>
+
+    <!--没有账号&忘记密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_no_acc"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="没有账号"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+
+        <View
+            style="@style/split_line"
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/tv_forget_pwd"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="忘记密码"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp" />
+    </LinearLayout>
+</RelativeLayout>

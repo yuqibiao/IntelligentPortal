@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/base_tb"
+        android:layout_height="48dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/btn_left"
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@mipmap/ic_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/base_tv"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="标题"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btn_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:text="SAVE"
+                android:visibility="gone"
+                android:textColor="#999999"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/split_line" />
+
+
+</LinearLayout>

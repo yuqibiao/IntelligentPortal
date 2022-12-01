@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E26110</color>
+    <color name="colorPrimaryDark">#E26110</color>
+    <color name="colorAccent">#FCA33B</color>
+    <color name="colorAccentDark">#1B1A1A</color>
+    <color name="color_line">#eeeeee</color>
+    <color name="leftMenuUnSelected" >@color/colorAccent</color>
+    <color name="leftMenuSelected" >@color/colorPrimary</color>
+
+    <color name="black_333">#333333</color>
+    <color name="black_666">#666666</color>
+    <color name="black_999">#999999</color>
+
+    <color name="color_card_bg">#FDFAF3</color>
+
+    <color name="colorWhite">#fff</color>
+    <color name="red">#E91E63</color>
+
+    <color name="tabNormal">#999999</color>
+    <color name="tabSelected">#343434</color>
+    <color name="splitLine">#DCDCDC</color>
+
+    <color name="bg_color">#F8F8F8</color>
+    <color name="tab_selected">#343434</color>
+    <color name="tab_normal">#C0C0C0</color>
+
+    <color name="black_20">#33000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="green_verified">#25BC81</color>
+    <color name="orange_rejected">#F33434</color>
+    <color name="orange_wallet_text">#EB6154</color>
+    <color name="black_34">#FF343434</color>
+    <color name="gray_66">#666666</color>
+    <color name="line_dash">#E3D4C0</color>
+    <color name="orange_text_color">#B9966C</color>
+    <color name="rent_color">#99000000</color>
+
+</resources>

@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- dialog 的style -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--dialog动画的style-->
+    <style name="dialog_anim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowEnterAnimation">@anim/modal_in</item>
+        <item name="android:windowExitAnimation">@anim/modal_out</item>
+    </style>
+
+    <!--图片选择pop动画-->
+    <style name="pic_choice">
+        <item name="android:windowEnterAnimation">@anim/pic_choice_pop_hidden</item>
+        <item name="android:windowExitAnimation">@anim/pic_choice_pop_show</item>
+    </style>
+
+    <!--DatePickerPop对应的动画-->
+    <style name="pop_date_picker">
+        <item name="android:windowEnterAnimation">@anim/expand_show</item>
+        <item name="android:windowExitAnimation">@anim/expand_hidden</item>
+    </style>
+
+    <!--gray line-->
+    <style name="gray_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/my_gray</item>
+    </style>
+
+    <!--activity dialog-->
+    <style name="Theme.ActivityDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--是否半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--设置dialog的背景-->
+        <item name="android:windowBackground">@color/trans_white_bg</item>
+        <!--背景是否模糊显示-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--设置窗口内容不覆盖-->
+        <item name="android:windowContentOverlay">@null</item>
+        <!--点击空白地方关闭-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <!--是否浮现在activity之上-->
+       <!-- <item name="android:windowIsFloating">true</item>-->
+        <!--设置动画，在这里使用让它继承系统的Animation.Dialog-->
+        <item name="android:windowAnimationStyle">@style/dialog_anim</item>
+    </style>
+
+
+</resources>

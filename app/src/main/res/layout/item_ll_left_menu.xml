@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3653BB"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_left_line"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="#09F3D5" />
+
+        <ImageView
+            android:id="@+id/iv_menu_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="28dp"
+            android:src="#09F3D5" />
+
+        <TextView
+            android:id="@+id/tv_menu_title"
+            style="@style/base_tv"
+            android:layout_marginLeft="10dp"
+            android:text="项目审计"
+            android:textColor="@color/white"
+            android:textSize="16dp"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

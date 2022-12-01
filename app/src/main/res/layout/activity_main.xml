@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--content-->
+    <com.yyyu.baselibrary.ui.widget.NoScrollViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--tab menu-->
+    <View style="@style/split_line" />
+
+    <com.yinglan.alphatabs.AlphaTabsIndicator
+        android:id="@+id/ati_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:badgeBackgroundColor="@color/red"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/ic_browser_normal"
+            app:tabIconSelected="@mipmap/ic_browser_selected"
+            app:tabText="@string/home_tab_1"
+            app:tabTextSize="9sp"
+            app:textColorNormal="@color/tabNormal"
+            app:textColorSelected="@color/tabSelected" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:badgeBackgroundColor="@color/red"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/ic_browser_normal"
+            app:tabIconSelected="@mipmap/ic_browser_selected"
+            app:tabText="@string/home_tab_2"
+            app:tabTextSize="9sp"
+            app:textColorNormal="@color/tabNormal"
+            app:textColorSelected="@color/tabSelected" />
+
+        <com.yinglan.alphatabs.AlphaTabView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            app:badgeBackgroundColor="@color/red"
+            app:paddingTexwithIcon="5dp"
+            app:tabIconNormal="@mipmap/ic_browser_normal"
+            app:tabIconSelected="@mipmap/ic_browser_selected"
+            app:tabText="@string/home_tab_3"
+            app:tabTextSize="9sp"
+            app:textColorNormal="@color/tabNormal"
+            app:textColorSelected="@color/tabSelected" />
+
+    </com.yinglan.alphatabs.AlphaTabsIndicator>
+
+</LinearLayout>
