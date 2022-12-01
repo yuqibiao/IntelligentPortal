@@ -1,11 +1,11 @@
 package com.yyyu.db.std.portal.app.bean.msg;
 
 /**
- * 功能：
+ * 功能：token消息bean
  *
  * @author yyyu
  * @version 1.0
- * @date 2019/7/3
+ * @date 2022-11-30
  */
 public class TokenExprMsg {
 

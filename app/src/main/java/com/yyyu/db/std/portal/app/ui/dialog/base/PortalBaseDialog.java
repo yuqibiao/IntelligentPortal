@@ -8,11 +8,11 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * 功能：智能审计 基类Dialog
+ * 功能：智隧通基类Dialog
  *
  * @author yyyu
  * @version 1.0
- * @date 2021/05/31
+ * @date 2022-11-30
  */
 public abstract class PortalBaseDialog extends BaseDialog {
 

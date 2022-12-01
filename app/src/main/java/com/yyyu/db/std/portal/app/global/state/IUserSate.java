@@ -6,7 +6,7 @@ import android.content.Context;
  * 功能：用户状态
  *
  * @author yu
- * @date 2019/7/3
+ * @date 2022-11-30
  */
 public interface IUserSate {
 

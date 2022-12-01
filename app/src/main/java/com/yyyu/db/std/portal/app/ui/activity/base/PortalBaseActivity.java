@@ -23,11 +23,11 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * 功能：智能审计基类Activity
+ * 功能：智隧通基类Activity
  *
  * @author yyyu
  * @version 1.0
- * @date 2021/05/31
+ * @date 2022-11-30
  */
 public abstract class PortalBaseActivity extends BaseActivity {
 

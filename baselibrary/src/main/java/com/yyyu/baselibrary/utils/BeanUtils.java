@@ -1,4 +1,4 @@
-package com.yyyu.db.std.portal.app.utils;
+package com.yyyu.baselibrary.utils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;

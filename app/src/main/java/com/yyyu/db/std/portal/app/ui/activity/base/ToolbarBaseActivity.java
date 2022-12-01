@@ -17,7 +17,7 @@ import com.yyyu.db.std.portal.app.R;
  * 功能：带toolbar的基类Activity
  *
  * @author yu
- * @date 2021/06/21
+ * @date 2022-11-30
  */
 public abstract class ToolbarBaseActivity extends PortalBaseActivity {
 

@@ -15,11 +15,11 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
- * 功能：
+ * 功能：操作弹窗
  *
  * @author yyyu
  * @version 1.0
- * @date 2019/6/15
+ * @date 2022-11-30
  */
 public class OptionDialog extends PortalBaseDialog {
 

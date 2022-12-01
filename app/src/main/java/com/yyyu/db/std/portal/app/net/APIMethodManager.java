@@ -3,13 +3,18 @@ package com.yyyu.db.std.portal.app.net;
 import com.google.gson.Gson;
 import com.trello.rxlifecycle2.LifecycleProvider;
 import com.trello.rxlifecycle2.android.ActivityEvent;
-import com.yyyu.db.std.portal.app.bean.rtn.GetProductListRtn;
+import com.yyyu.db.std.portal.app.bean.rtn.GetDeviceDetailBtn;
+import com.yyyu.db.std.portal.app.bean.rtn.GetDeviceListBtn;
+import com.yyyu.db.std.portal.app.bean.rtn.GetDeviceTypeDictTreeBtn;
+import com.yyyu.db.std.portal.app.bean.rtn.GetSysTypeDictTreeRtn;
 import com.yyyu.db.std.portal.app.bean.rtn.LoginRtn;
 import com.yyyu.db.std.portal.app.bean.rtn.OprExeRtn;
-import com.yyyu.db.std.portal.app.bean.vo.GetProductListVo;
+import com.yyyu.db.std.portal.app.bean.vo.GetDeviceDetailVo;
+import com.yyyu.db.std.portal.app.bean.vo.GetDeviceListVo;
+import com.yyyu.db.std.portal.app.bean.vo.GetDeviceTypeDictTreeVo;
 import com.yyyu.db.std.portal.app.bean.vo.LoginVo;
-import com.yyyu.db.std.portal.app.net.api.AuditNetApi;
-import com.yyyu.db.std.portal.app.utils.BeanUtils;
+import com.yyyu.db.std.portal.app.net.api.PortalNetApi;
+import com.yyyu.baselibrary.utils.BeanUtils;
 
 import java.util.Map;
 
@@ -24,13 +29,13 @@ import io.reactivex.schedulers.Schedulers;
  *
  * @author yu
  * @version 1.0
- * @date 2019/6/3
+ * @date 2022-11-30
  */
 
 public class APIMethodManager {
 
 
-    private final AuditNetApi netApi;
+    private final PortalNetApi netApi;
     private final Gson mGson;
 
     private APIMethodManager() {
@@ -47,42 +52,6 @@ public class APIMethodManager {
         return SingletonHolder.INSTANCE;
     }
 
-    /**
-     * 获取商品列表
-     *
-     * @param provider
-     * @param productListVo
-     * @param callback
-     * @return
-     */
-    public Disposable getProductList(LifecycleProvider<ActivityEvent> provider
-            , GetProductListVo productListVo
-            , final IRequestCallback<GetProductListRtn> callback) {
-
-        Disposable subscribe = netApi.getProductList(productListVo.getTag()
-                , "" + productListVo.isRecommend()
-                , productListVo.getProps()
-                , productListVo.getIdList()
-                , "" + productListVo.getCategoryId()
-                , "" + productListVo.getBrandId()
-                , productListVo.getTitle())
-                .compose(provider.<GetProductListRtn>bindToLifecycle())
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<GetProductListRtn>() {
-                    @Override
-                    public void accept(GetProductListRtn getProductListRtn) throws Exception {
-                        callback.onSuccess(getProductListRtn);
-                    }
-                }, new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) throws Exception {
-                        callback.onFailure(throwable);
-                    }
-                });
-
-        return subscribe;
-    }
 
     /**
      * 登录
@@ -129,7 +98,7 @@ public class APIMethodManager {
      * @return
      */
     public Disposable logout(LifecycleProvider<ActivityEvent> provider,
-                            final IRequestCallback<OprExeRtn> callback) {
+                             final IRequestCallback<OprExeRtn> callback) {
         Disposable subscribe = netApi.logout()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -148,5 +117,124 @@ public class APIMethodManager {
 
         return subscribe;
     }
+
+    /**
+     * 获取系统类型字典树
+     *
+     * @param provider
+     * @param callback
+     * @return
+     */
+    public Disposable getSysTypeDictTree(LifecycleProvider<ActivityEvent> provider,
+                                         final IRequestCallback<GetSysTypeDictTreeRtn> callback) {
+        Disposable subscribe = netApi.getSysTypeDictTree()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(provider.<GetSysTypeDictTreeRtn>bindToLifecycle())
+                .subscribe(new Consumer<GetSysTypeDictTreeRtn>() {
+                    @Override
+                    public void accept(GetSysTypeDictTreeRtn res) throws Exception {
+                        callback.onSuccess(res);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        callback.onFailure(throwable);
+                    }
+                });
+
+        return subscribe;
+    }
+
+    /**
+     * 获取设备类型字典树
+     *
+     * @param provider
+     * @param getDeviceTypeDictTreeVo
+     * @param callback
+     * @return
+     */
+    public Disposable getDeviceTypeDictTree(LifecycleProvider<ActivityEvent> provider,
+                                            GetDeviceTypeDictTreeVo getDeviceTypeDictTreeVo,
+                                            final IRequestCallback<GetDeviceTypeDictTreeBtn> callback) {
+        Disposable subscribe = netApi.getDeviceTypeDictTree(getDeviceTypeDictTreeVo)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(provider.<GetDeviceTypeDictTreeBtn>bindToLifecycle())
+                .subscribe(new Consumer<GetDeviceTypeDictTreeBtn>() {
+                    @Override
+                    public void accept(GetDeviceTypeDictTreeBtn res) throws Exception {
+                        callback.onSuccess(res);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        callback.onFailure(throwable);
+                    }
+                });
+
+        return subscribe;
+    }
+
+    /**
+     * 获取设备列表
+     *
+     * @param provider
+     * @param getDeviceListVo
+     * @param callback
+     * @return
+     */
+    public Disposable getDeviceList(LifecycleProvider<ActivityEvent> provider,
+                                    GetDeviceListVo getDeviceListVo,
+                                    final IRequestCallback<GetDeviceListBtn> callback) {
+        Disposable subscribe = netApi.getDeviceList(getDeviceListVo)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(provider.<GetDeviceListBtn>bindToLifecycle())
+                .subscribe(new Consumer<GetDeviceListBtn>() {
+                    @Override
+                    public void accept(GetDeviceListBtn res) throws Exception {
+                        callback.onSuccess(res);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        callback.onFailure(throwable);
+                    }
+                });
+
+        return subscribe;
+    }
+
+    /**
+     * 获取设备详情
+     *
+     * @param provider
+     * @param getDeviceDetailVo
+     * @param callback
+     * @return
+     */
+    public Disposable getDeviceDetail(LifecycleProvider<ActivityEvent> provider,
+                                      GetDeviceDetailVo getDeviceDetailVo,
+                                      final IRequestCallback<GetDeviceDetailBtn> callback) {
+        Disposable subscribe = netApi.getDeviceDetail(getDeviceDetailVo)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .compose(provider.<GetDeviceDetailBtn>bindToLifecycle())
+                .subscribe(new Consumer<GetDeviceDetailBtn>() {
+                    @Override
+                    public void accept(GetDeviceDetailBtn res) throws Exception {
+                        callback.onSuccess(res);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        callback.onFailure(throwable);
+                    }
+                });
+
+        return subscribe;
+    }
+
 
 }

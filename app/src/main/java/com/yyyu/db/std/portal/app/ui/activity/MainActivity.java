@@ -1,6 +1,5 @@
 package com.yyyu.db.std.portal.app.ui.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -9,7 +8,6 @@ import android.support.v4.view.ViewPager;
 
 import com.yinglan.alphatabs.AlphaTabsIndicator;
 import com.yinglan.alphatabs.OnTabChangedListner;
-import com.yyyu.baselibrary.utils.ActivityHolder;
 import com.yyyu.db.std.portal.app.MyApplication;
 import com.yyyu.db.std.portal.app.R;
 import com.yyyu.db.std.portal.app.bean.msg.TokenExprMsg;
@@ -30,7 +28,7 @@ import de.greenrobot.event.ThreadMode;
  *
  * @author yyyu
  * @version 1.0
- * @date 2021-05-31
+ * @date 2022-11-30
  */
 public class MainActivity extends ToolbarBaseActivity {
 
@@ -42,7 +40,7 @@ public class MainActivity extends ToolbarBaseActivity {
 
     private MyApplication application;
 
-    private List<Fragment> mTabs = new ArrayList<>();
+    private final List<Fragment> mTabs = new ArrayList<>();
 
     @Override
     public int getLayoutId() {
@@ -92,10 +90,10 @@ public class MainActivity extends ToolbarBaseActivity {
                         setTbTitle("首页");
                         break;
                     case 1:
-                        setTbTitle("任务");
+                        setTbTitle("巡检任务");
                         break;
                     case 2:
-                        setTbTitle("我的");
+                        setTbTitle("我的账号");
                         break;
                 }
             }

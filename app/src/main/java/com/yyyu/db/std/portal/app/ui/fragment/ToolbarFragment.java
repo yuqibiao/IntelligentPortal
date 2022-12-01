@@ -18,7 +18,7 @@ import butterknife.OnClick;
  *
  * @author yyyu
  * @version 1.0
- * @date 2019/6/3
+ * @date 2022-11-30
  */
 public class ToolbarFragment extends PortalBaseFragment {
 
@@ -50,12 +50,12 @@ public class ToolbarFragment extends PortalBaseFragment {
             tvTitle.setText(title);
             btnRight.setText(rightBtnText);
         }
-        if (mBuilder!=null && mBuilder.showLeftBtn) {
+        if (mBuilder != null && mBuilder.showLeftBtn) {
             btnLeft.setVisibility(View.VISIBLE);
         } else {
             btnLeft.setVisibility(View.GONE);
         }
-        if (mBuilder!=null && mBuilder.mOnRightButtonListener != null) {
+        if (mBuilder != null && mBuilder.mOnRightButtonListener != null) {
             btnRight.setVisibility(View.VISIBLE);
         }
     }
@@ -65,7 +65,7 @@ public class ToolbarFragment extends PortalBaseFragment {
 
     }
 
-    @OnClick({R.id.btn_left , R.id.btn_right})
+    @OnClick({R.id.btn_left, R.id.btn_right})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_left: {//左边按钮
@@ -76,7 +76,7 @@ public class ToolbarFragment extends PortalBaseFragment {
                 }
                 break;
             }
-            case R.id.btn_right:{
+            case R.id.btn_right: {
                 if (mBuilder.mOnRightButtonListener != null) {
                     mBuilder.mOnRightButtonListener.onClick();
                 }

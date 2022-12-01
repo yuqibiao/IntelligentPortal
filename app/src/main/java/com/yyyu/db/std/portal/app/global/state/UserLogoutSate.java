@@ -6,7 +6,7 @@ import android.content.Context;
  * 功能：未登录状态
  *
  * @author yu
- * @date 2019/7/3
+ * @date 2022-11-30
  */
 public class UserLogoutSate implements IUserSate {
 

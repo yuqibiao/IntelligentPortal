@@ -7,7 +7,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import com.yyyu.baselibrary.utils.MyLog;
-import com.yyyu.db.std.portal.app.net.api.AuditNetApi;
+import com.yyyu.db.std.portal.app.net.api.PortalNetApi;
 import com.yyyu.db.std.portal.app.net.gson.DoubleDefault0Adapter;
 import com.yyyu.db.std.portal.app.net.gson.IntegerDefault0Adapter;
 import com.yyyu.db.std.portal.app.net.gson.LongDefault0Adapter;
@@ -28,12 +28,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
  *
  * @author yu
  * @version 1.0
- * @date 2019/6/3
+ * @date 2022-11-30
  */
 
 public class APIFactory {
 
-    public static final String BASE_URL = "http://106.14.75.32:60000/bdmp/public/";
+    public static final String BASE_URL = "http://106.14.75.32:60000/";
 
     private static final int DEFAULT_TIMEOUT = 1;
 
@@ -87,9 +87,9 @@ public class APIFactory {
         return SingletonHolder.INSTANCE;
     }
 
-    public AuditNetApi createApi() {
+    public PortalNetApi createApi() {
         Retrofit retrofit = builder.baseUrl(BASE_URL).build();
-        AuditNetApi netApi = retrofit.create(AuditNetApi.class);
+        PortalNetApi netApi = retrofit.create(PortalNetApi.class);
         return netApi;
     }
 

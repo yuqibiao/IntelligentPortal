@@ -16,7 +16,7 @@ import butterknife.BindView;
  *
  * @author yyyu
  * @version 1.0
- * @date 2019/6/7
+ * @date 2022-11-30
  */
 public class SplashActivity extends PortalBaseActivity {
 

@@ -15,7 +15,7 @@ import com.yyyu.db.std.portal.app.ui.dialog.base.PortalBaseDialog;
  *
  * @author yu
  * @version 1.0
- * @date 2021/05/31
+ * @date 2022-11-30
  */
 public class LoadingDialog extends PortalBaseDialog {
 

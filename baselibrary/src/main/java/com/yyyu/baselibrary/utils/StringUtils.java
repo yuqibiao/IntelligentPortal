@@ -1,4 +1,4 @@
-package com.yyyu.db.std.portal.app.utils;
+package com.yyyu.baselibrary.utils;
 
 import android.content.Context;
 import android.support.annotation.StringRes;
@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  *
  * @author yu
  * @version 1.0
- * @date 2021/05/31
+ * @date 2022-11-30
  */
 public class StringUtils {
 

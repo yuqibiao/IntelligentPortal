@@ -5,7 +5,7 @@ package com.yyyu.db.std.portal.app.net;
  *
  * @author yyyu
  * @version 1.0
- * @date 2019/6/3
+ * @date 2022-11-30
  */
 
 public interface IRequestCallback<T> {

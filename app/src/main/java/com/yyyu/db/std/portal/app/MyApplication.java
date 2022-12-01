@@ -18,7 +18,7 @@ import com.yyyu.baselibrary.utils.MySPUtils;
  *
  * @author yu
  * @version 1.0
- * @date 2021/05/31
+ * @date 2022-11-30
  */
 public class MyApplication extends MultiDexApplication {
 

@@ -9,11 +9,11 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * 功能：智能审计-Fragment基类
+ * 功能：智遂通-Fragment基类
  *
  * @author yu
  * @version 1.0
- * @date 2021/05/31
+ * @date 2022-11-30
  */
 public abstract class PortalBaseFragment extends BaseFragment {
 

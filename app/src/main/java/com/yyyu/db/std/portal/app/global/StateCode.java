@@ -4,7 +4,7 @@ package com.yyyu.db.std.portal.app.global;
  * 功能：状态码
  *
  * @author yu
- * @date 2019/7/12
+ * @date 2022-11-30
  */
 public interface StateCode {
 

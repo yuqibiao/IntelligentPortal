@@ -6,7 +6,7 @@ package com.yyyu.db.std.portal.app.global;
  * @author yu
  * @date 2019/7/29
  */
-public interface AuditConfig {
+public interface PortalConfig {
 
     /**
      * google地图相关配置

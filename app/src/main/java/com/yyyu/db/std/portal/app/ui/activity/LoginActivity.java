@@ -11,11 +11,10 @@ import com.yyyu.db.std.portal.app.MyApplication;
 import com.yyyu.db.std.portal.app.R;
 import com.yyyu.db.std.portal.app.bean.rtn.LoginRtn;
 import com.yyyu.db.std.portal.app.global.StateCode;
-import com.yyyu.db.std.portal.app.global.state.LoginContext;
 import com.yyyu.db.std.portal.app.net.APIMethodManager;
 import com.yyyu.db.std.portal.app.net.IRequestCallback;
 import com.yyyu.db.std.portal.app.ui.activity.base.PortalBaseActivity;
-import com.yyyu.db.std.portal.app.utils.StringUtils;
+import com.yyyu.baselibrary.utils.StringUtils;
 
 import butterknife.BindView;
 
